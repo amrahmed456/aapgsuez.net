@@ -1,0 +1,117 @@
+.single-event-page{
+
+    // top header section
+    .top-hero{
+        background-color: #FFF;
+        .main-slider{
+            overflow: hidden;
+            border-radius: $smallBorder;
+            .slider-item-img{
+                height: 400px;
+                overflow: hidden;
+                border: 1px solid #EEE;
+                a{
+                    display: block;
+                    height: 100%;
+                    img{
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+               
+            }
+            .owl-theme .owl-dots .owl-dot span{
+                transition:.4s;
+                margin: 5px 4px;
+            }
+            .owl-theme .owl-dots .active span{
+                background-color: $mainColor;
+                width: 25px;
+            }
+        }
+
+        .event-details{
+            .ribbon{
+                @extend %ribbon
+            }
+            .event-cards{
+                .card-icon{
+                    padding: 13px 14px;
+                    background: #e7e7e7;
+                    border-radius: 4px;
+                    color: #808080;
+                    .icon{
+                        font-size: 17px;
+                    }
+                }
+                .small{
+                    font-size: 11px;
+                    color: gray;
+                }
+            }
+        }
+
+    }
+
+    .details-similar-section{
+        .content,
+        .comments-section{
+            padding: 20px 25px;
+            border-radius: $smallBorder;
+            background-color: #FFF;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .similar-events{
+        .head{
+            background-color: #FFF;
+            border-radius: $smallBorder;
+            text-transform: uppercase;
+            font-weight: bold;
+            color:#808080;
+            font-size: 13px;
+        }
+        .similar-event-single{
+            *{
+                box-sizing: border-box;
+            }
+            .ribbon{
+                @extend %ribbon;
+                font-size: 10px;
+            }
+            .tag{
+                font-size: 10px;
+            }
+            .href-event{
+                width: 55%;
+                height: 220px;
+            }
+            .event-image{
+                overflow: hidden;
+                border-radius: $smallBorder;
+                transition: .5s;
+                &:hover{
+                    box-shadow: 3px 3px 13px #A7A7A7;
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: .5s;
+                }
+            }
+            .event-details{
+                width: 60%;
+            }
+        }
+    }
+
+}

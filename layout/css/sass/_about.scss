@@ -1,0 +1,62 @@
+.about-template{
+    .header{
+        height: 370px;
+        overflow: hidden;
+        background-size: cover;
+        .overlay{
+            background: linear-gradient(to right , #000 , transparent);
+            .slogan{
+                text-transform: uppercase;
+                color:#FFF;
+                h1{
+                    font-weight: bolder !important;
+                    @media(max-width: 560px){
+                        font-size: 30px
+                    }
+                }
+                
+            }
+        }
+    }
+    .stats{
+        padding: 20px 0px;
+        background: #FFF;
+        font-size: 14px;
+        .stat:nth-of-type(1) .icon{
+            color:$mainColor
+        }
+        .stat:nth-of-type(2) .icon{
+            color:#fbbc6c
+        }
+        .stat:nth-of-type(3) .icon{
+            color:#8f8f8f
+        }
+        .stat:nth-of-type(4) .icon{
+            color:#2683d5
+        }
+    }
+
+    .general-about-sub-section .about-navigation-menu{
+        background: #FFF;
+        overflow: hidden;
+        li a{
+            padding: 20px 40px;
+            color:#757575;
+            &:hover{
+                background-color: #eeeeee;
+            }
+        }
+        li .active{
+            border-left: 4px solid $mainColor;
+            background: #ffebeb;
+            color:#000;
+            &:hover{
+                background: #ffebeb;
+            }
+        }
+    }
+
+}
+.about-page{
+    
+}

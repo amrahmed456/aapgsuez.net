@@ -1,0 +1,69 @@
+.team-about-page{
+
+    .team-about-page-menu  .about-navigation-menu {
+          li .active{
+                border-left: none !important;
+                background: #46b2f1;
+                color: rgb(255, 255, 255);
+          }
+          a:hover{
+              background: #e4f5ff !important;
+          }
+    }
+
+    .member{
+        background-color: #FFF;
+        border-radius: $bigBorder;
+        overflow: hidden;
+        width: 275px;
+        .member-img{
+            height: 220px;
+            overflow: hidden;
+            border-bottom: 1px solid #EFEFEF;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        .member-info > div{
+            span{
+                font-size: 12px;
+                color:#777
+            }
+        }
+        .member-info{
+            .member-name{
+                font-weight: bold;
+                color:#000;
+                font-size: 15px;
+            }
+            .member-position{
+                text-transform: uppercase;
+                color:$mainColor
+            }
+            .show-more-info{
+                background: #e2f2ff;
+                font-size: 12px;
+                cursor: pointer;
+                color: #6d6d6d;
+                &:hover{
+                    background: #cce8ff;
+                    color: #000;
+                }
+            }
+            .social-btns{
+                a{
+                    margin-right: 10px;
+                    color:#666;
+                    &:hover{
+                        color:#000
+                    }
+                }
+                a:last-child{
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+}

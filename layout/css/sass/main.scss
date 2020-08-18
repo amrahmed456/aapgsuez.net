@@ -1,0 +1,341 @@
+/*
+
+Theme Name: AAPG-Suez
+Theme URI: https://www.aapgsuez.net/
+Author: Amr Ahmed
+Author URI: https://aapgsuez.net/
+Description: This theme is created by AAPG suez student chapter
+Requires at least: 4.9.6
+Requires PHP: 7.2.4
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: aapgsuez
+
+*/
+
+/*
+
+- This stylesheet contains all variables/mixins/ main rules
+- used to include all styles for all pages and generates the main.css file used by the front-end
+- you can customize general rules here 
+- customize each page on it's corresponding css file [ just in the sass folder ]
+- you must compile the sass file after modifying to take effect
+
+*/
+
+/* general rules */
+
+$mainBodyBackground:    #f0f1f3;
+$secondaryBackGround:   #fff;
+$mainHeadColor:         #000;
+$secondaryColor:        #555;
+$mainColor:             #9e1515;
+$smallBorder:           7px;
+$bigBorder:             12px;
+
+*{
+    outline: none
+}
+
+body{
+    background-color: $mainBodyBackground;
+    font-family:'Graphik web',sans-serif;
+    overflow-x:hidden;
+}
+
+a:hover{
+    text-decoration:none
+}
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .pace-inactive {
+    display: none;
+  }
+  
+  .pace .pace-progress {
+    background: #29d;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+  }
+  
+  .pace .pace-progress-inner {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+    opacity: 1.0;
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -moz-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    -o-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  .pace .pace-activity {
+    display: block;
+    position: fixed;
+    z-index: 2000;
+    top: 15px;
+    right: 15px;
+    width: 14px;
+    height: 14px;
+    border: solid 2px transparent;
+    border-top-color: #29d;
+    border-left-color: #29d;
+    border-radius: 10px;
+    -webkit-animation: pace-spinner 400ms linear infinite;
+    -moz-animation: pace-spinner 400ms linear infinite;
+    -ms-animation: pace-spinner 400ms linear infinite;
+    -o-animation: pace-spinner 400ms linear infinite;
+    animation: pace-spinner 400ms linear infinite;
+  }
+  
+  @-webkit-keyframes pace-spinner {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @-moz-keyframes pace-spinner {
+    0% { -moz-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @-o-keyframes pace-spinner {
+    0% { -o-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @-ms-keyframes pace-spinner {
+    0% { -ms-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  }
+  @keyframes pace-spinner {
+    0% { transform: rotate(0deg); transform: rotate(0deg); }
+    100% { transform: rotate(360deg); transform: rotate(360deg); }
+  }  
+
+.padd{
+    padding-top:60px;
+    padding-bottom: 60px;
+}
+
+.overlay{
+    width:100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.subscribe-section{
+    background: url("../../layout/imgs/subscribe-section.png") no-repeat center center;
+    background-size: cover;
+    h2{
+        color:#FFF;
+    }
+    p{
+        color:#e5e5e5
+    }
+    .form{
+        width:100%;
+        .form-control{
+            padding: .575rem .75rem !important;
+            height: 100%;
+        }
+        .btn-primary{
+            background-color: #f0be38;
+            border-color: #f0be38;
+        }
+    }
+}
+
+
+/* start bootstrap modification */
+.form-control{
+    border-radius: $smallBorder;
+    &:focus{
+        border-color:#555
+    }
+}
+textarea{
+    resize: none;
+}
+.lead{
+    color:#757575
+}
+
+.btn{
+    padding: 11px 30px;
+    border:none;
+    border-radius: $smallBorder;
+    transition: .4s;
+    &:hover{
+        transform:scale(1.02);
+    }
+}
+
+.btn-sm{
+    padding:7px 20px
+}
+
+.btn-white{
+    background-color:#FFF ;
+}
+.btn-secondary{
+    background:#feeab8;
+    color:#000;
+    color: #555;
+    &:hover{
+        color: rgb(0, 0, 0);
+        background-color: #ffd365;
+        border-color: none;
+    }
+  
+}
+/* end bootstrap modification */
+
+/* start navbar */
+.navbar{
+    padding:0;
+    background-color: $secondaryBackGround !important;
+    box-shadow: 0px 1px 5px #ebebeb;
+    .navbar-nav .nav-link{
+        color:$secondaryColor;
+        text-transform: capitalize;
+    }
+    .navbar-brand img{
+        max-width:50px
+    }
+    .navbar-nav .nav-link{
+        padding-right: 1rem
+    }
+    .dropdown-toggle{
+        margin-right: 12px
+    }
+    .dropdown-toggle::after {
+        content:none
+    }
+    .dropdown-toggle .dropdown-i{
+        font-size: 12px;
+        color: #919191;
+        top: 16px;
+        transform: translateX(50%)
+    }
+    .social-btns .icon{
+        color:$secondaryColor
+    }
+    #navbarSupportedContent.show{
+        min-height: 100vh;
+    }
+
+}
+.custom-dropdown-parent{
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 1040;
+    box-shadow: 0px 2px 15px #D8D8D8;
+    overflow: auto;
+    .custom-dropdown-child{
+        border-radius: $smallBorder;
+        color:#FFF;
+        transition: .4s;
+        margin-bottom: 25px;
+        .lead{
+            color:#FFF
+        }
+    }
+    .sub-slide:nth-of-type(1) .custom-dropdown-child {
+        background: linear-gradient(-45deg , #79c0fb , #2484d8)
+    }
+    .sub-slide:nth-of-type(2) .custom-dropdown-child{
+        background: linear-gradient(-45deg, #fbaa79, #d84e24)
+    }
+    .sub-slide:nth-of-type(3) .custom-dropdown-child{
+        background: linear-gradient(-45deg, #6cc77e, #088f83)
+    }
+    .sub-slide .custom-dropdown-child:hover{
+        background: #4fc2fd !important;
+    }
+    a{
+        height: 300px;
+        flex-direction: column;
+        justify-content: space-between;
+        color:$mainHeadColor;
+        color:#FFF;
+        .descripton{
+            color: #e3e3e3;
+            font-size: 15px;
+        }
+    }
+    
+}
+
+/* end navbar */
+
+/* start footer */
+.footer{
+    border-top: 1px solid #DDD;
+    h6{
+        font-size: 19px;
+        color: #4c4c4c;
+        margin-bottom: 40px !important;
+    }
+    a{
+        color:#717171;
+        &:hover{
+            color:#000;
+        }
+    }
+    ul li{
+        margin-bottom: 15px;
+        text-transform: capitalize;
+    }
+
+    .google-play-btn img{
+        max-width: 180px;
+    }
+}
+/* end footer */
+
+/* included files */
+/* each file is corresponded with specific page */
+
+@import 'home';
+@import 'events';
+@import 'event';
+@import 'articles';
+@import 'article';
+@import 'news';
+@import 'project';
+@import 'magazine';
+@import 'about';
+@import 'awards';
+@import 'sponsors';
+@import 'team';
+@import 'gallery';
+
+
+/* start media query */
+
+@media(max-width:484px){
+    .custom-dropdown-parent{
+        height: 100vh;
+        overflow: scroll;
+        a{
+            height: 200px
+        }
+    }
+
+}

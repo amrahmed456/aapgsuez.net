@@ -1,0 +1,38 @@
+.awards-about-page{
+    .about-current-page-template-container{
+        .award{
+            background: linear-gradient(0deg , #f7e4f9 , #e2eedb);
+            border-radius: $smallBorder;
+            overflow: hidden;
+            height: 100%;
+            transition: .5s;
+            &:hover{
+                box-shadow: 6px 9px 23px #E1E1E1;
+            }
+            .icon{
+                display: block;
+                margin-bottom: 40px;
+                font-size: 35px;
+                color: #828282;
+            }
+            .small{
+                font-size: 12px;
+                color: #555;
+            }
+        }
+    
+
+        $linears: (#bad8f2:#c8dff4, #fdd1d1:#fff5f5 , #c4f9f1:#f2fff8 , #b3b6e4:#fff , #e1b799:#fffbea , #d7e6a1:#e2eedb);
+        
+        $count: 1;
+        @each $key,$val in $linears {
+            .my-col:nth-of-type(#{$count}) .award{
+                background: linear-gradient(0deg , $key , $val);
+            }
+            
+            $count: $count + 1;
+        }
+
+    }
+
+}

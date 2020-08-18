@@ -1,0 +1,58 @@
+.news-page{
+
+    .artices-page{
+        .header{
+            background: url("../../layout/imgs/ifr05.jpg") no-repeat center top;
+            background-size: cover;
+        }
+        .container{
+            width:auto
+        }
+        .lead{
+            width: 60%;
+            margin: 40px auto;
+            @media (max-width:560px){
+                width:95%
+            }
+        }
+        .category-news{
+            padding: 9px 24px;
+            border-radius: 25px;
+            color:$mainColor;
+            background-color: #FFF;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        .category-active{
+            color:#FFF;
+            background-color: rgb(230, 149, 0);
+            &:hover{
+                opacity:1
+            }
+        }
+    }
+
+    .news-section{
+        .new-single{
+            border:1px solid #DDD;
+            border-radius: $smallBorder;
+            background-color: #FFF;
+            color:#000;
+            height: 100%;
+            &:hover{
+                background-color: #F3F3F3;
+            }
+            .small{
+                color:#777
+            }
+        }
+        .widgets{
+            top:75px
+        }
+    }
+
+}

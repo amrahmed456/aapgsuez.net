@@ -1,0 +1,65 @@
+.artices-page{
+
+    .header{
+        background: url('../../layout/imgs/learn3.jpg') no-repeat center center;
+        background-size: cover;
+        padding: 100px 0;
+        .overlay{
+            background: rgba(0,0,0,.5);
+        }
+        .container{
+            width: 60%;
+            @media (max-width:500px) {
+                width:95%
+            }
+        }
+        input,
+        select{
+            height: 47px;
+        }
+        h1{
+            color:#FFF;
+            text-transform: uppercase;
+        }
+        .lead{
+            color:#bfbfbf
+        }
+    }
+
+    .articles{
+        background-color: #EEE;
+        .article{
+            border-radius: $smallBorder;
+            background-color: #FFF;
+            border:1px solid rgb(223, 223, 223);
+            color:#000;
+            transition: .5s;
+            &:hover{
+                box-shadow: 4px 4px 20px rgb(200, 200, 200);
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            .article-img{
+                height: 250px;
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: .5s;
+                }
+            }
+            .description{
+                .small{
+                    color:#666
+                }
+                .category{
+                    font-size: 12px;
+                    color: #ce960b;
+                }
+            }
+        }
+    }
+    
+}

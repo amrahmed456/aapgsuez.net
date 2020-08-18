@@ -1,0 +1,365 @@
+$colors:(#004d76:#88d3fb , #4b7e0e:#c7fb88, #a02323:#ff9b9b , #00656f:#b7f8ff , #494949:#bcbcbc , #9a9a9a:#1b0404 , #372ada:#b4aeff , #c619bd:#ffcafc);
+
+#home-page{
+    /* general rules */
+    .see-more{
+        height: 100%;
+        border-radius: $smallBorder;
+        background-color: #1b1b1b;
+        h4{
+            color:#fff;
+        }
+        .lead{
+            font-size: 16px;
+        }
+    }
+
+    .event-tags{
+        .tag{
+            font-size: 12px;
+            padding: 4px 11px;
+            border-radius: 7px;
+            margin-bottom: 7px;
+        }
+        
+        $count: 1;
+        @each $key,$val in $colors {
+            .tag:nth-of-type(#{$count}){
+                color:$key;
+                background-color: $val;
+            }
+            
+            $count: $count + 1;
+        }
+    }
+
+    .about-project-card{
+        overflow: hidden;
+        border-radius: $smallBorder;
+        .btn{
+            box-shadow: 2px 2px 1px #BABABA;
+        }
+        .btn-white{
+            background: linear-gradient(to top , #D4D3D3,#FFF);
+            padding: 7px 14px;
+        }
+        .small{
+            height: 38px;
+            overflow: hidden;
+            color:#555
+        }
+        img{
+            max-width: 120px;
+        }
+    }
+
+    .event{
+        border-radius: $smallBorder;
+        overflow: hidden;
+        height: 100%;
+        border:1px solid #EEE;
+        box-shadow: 2px 2px 8px #EEE;
+        transition: .4s;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 6px 10px 28px #ddd;
+            .event-image img{
+                transform: scale(1.1);
+            }
+        }
+        .event-image{
+            height: 132px;
+            overflow: hidden;
+            img{
+                transition:.4s;
+            }
+        }
+        .event-name{
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .description{
+            font-size: 15px;
+            color: rgb(126, 126, 126);
+            height: 66px;
+            overflow: hidden;
+        }
+        .ribbon{
+            padding: 5px 30px;
+            background: #fff;
+            transform: rotate(-45deg);
+            top: 14px;
+            left: -36px;
+            font-size: 12px;
+            color:$mainColor;
+            border-bottom: 1px solid #DDD;
+            box-shadow: 0px 2px 5px #c1c1c1;
+            z-index: 5
+        }
+    }
+    
+    .event-category span,
+    .event-left-days span{
+        padding: 6px 20px;
+        border-radius: 36px;
+        background-color: #fad981;
+        color:$mainColor;
+        font-size: 13px;
+        box-shadow: 2px 2px 0px #a47b10;
+        font-size: 11px;
+    }
+
+// start hero section
+    .hero{
+        background-color:$secondaryBackGround;
+        min-height: 75vh;
+        img.logo{
+            max-width: 200px;
+            margin-bottom: 25px;
+        }
+        h1{
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        .small{
+            color:#666
+        }
+        .right-hero{
+            margin-top:35px;
+            border-radius: $bigBorder;
+            overflow: hidden;
+            box-shadow: 3px 15px 20px #C6C6C6;
+        }
+    }
+
+    .sponsors{
+        overflow-x: hidden;
+        .sponsors-banner{
+            animation: sponsorsanimation 50s linear infinite
+        }
+        .second-sponsors{
+            transform: translateX(0);
+        }
+        .sponsors-banner img{
+            width: 100px;
+            margin-right: 110px;
+        }
+    }
+    @keyframes sponsorsanimation{
+        0%{transform: translateX(0);}
+        100%{transform: translateX(-100%);}
+    }
+
+    /* start testmonials */
+    .testmonials {
+        background: linear-gradient(-45deg , #fbdb89 , #fcc7c7);
+        .about{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .about-card{
+                border-radius: $smallBorder;
+                background-color: #FFF;
+                p{
+                    color: #868282;
+                    line-height: 29px;
+                }
+            }
+        }
+        
+        .projects .project:nth-child(1) .about-project-card{
+            background: linear-gradient(-45deg , #ca9bfa , #a4b8f2);
+        }
+        .projects .project:nth-child(2) .about-project-card{
+            background: linear-gradient(-45deg , #fcc7c7 , #fba4a4);
+        }
+        .projects .project:nth-child(3) .about-project-card{
+            background: linear-gradient(-45deg , #a8c5ff , #c8dee0);
+        }
+        .projects .project:nth-child(4) .about-project-card{
+            background-color: #000;
+            .back-overlay,
+            .overlay{
+                border-radius: $smallBorder;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }
+            .back-overlay{
+                background-image: url("../../layout/imgs/team.png");
+                background-size: 100%;
+                z-index: 1;
+            }
+            .overlay{
+                background: linear-gradient(to right, #000, rgba(0,0,0,0));
+                z-index: 2;
+            }
+            .small{
+                color:#b3b3b3;
+                max-width: 80%;
+            }
+            b{
+                color: #FFF;
+            }
+            .content{
+                z-index:3
+            }
+            
+        }
+
+        .features{
+            margin-top:60px;
+            .feature {
+                .lead{
+                    color: #646464;
+                    font-size: 17px;
+                }
+                img{
+                    max-width: 60px;
+                }
+            }
+        } 
+        
+
+    }
+    /* end testmonials */
+
+    /* start events section */
+    .events-section{
+        background-color: $secondaryBackGround;
+        .latest-events-carousel{
+
+            .signle-event{
+                height:320px;
+                border-radius: $smallBorder;
+                overflow: hidden;
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+                transition: .4s;
+                .overlay{
+                    background: linear-gradient(0deg , #000 , rgba(0,0,0,0));
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    transition: .5s;
+                    &:hover{
+                        background: rgba(157, 22, 22,.8);
+                        .event-details{
+                            transform: translateY(200%);
+                        }
+                        .event-tags{
+                            top: 0;
+                        }
+                    }
+                    
+                    
+                    .event-left-days span{
+                        background-color: $mainColor;
+                        color:#fff;
+                        animation:flash 1s linear infinite
+                    }
+                    @keyframes flash{
+                        0%,100%{opacity:0.7}
+                        50%{opacity:1}
+                    }
+                    .event-tags{
+                        width: 100%;
+                        top:-1000px;
+                        transition: .5s;
+                        
+                    }
+                    .event-details{
+                        transform: translateY(0%);
+                        transition: .5s;
+                        h3{
+                            color:#FFF;
+                        }
+                        .description{
+                            overflow: hidden;
+                            color: #BABABA;
+                            height: 52px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    /* end events section */
+
+    /* start magazines section */
+    .magazines{
+        background: url("../../layout/imgs/creative-background.png") no-repeat center center fixed;
+        .about-project-card{
+            background: #FFF;
+        }
+    }
+
+
+    /* start news section */
+    .news{
+        .event{
+            .ribbon{
+                padding: 4px 20px;
+                background: #fad981;
+                transform: rotate(-0deg);
+                top: 14px;
+                left: 15px;
+                font-size: 12px;
+                color:$mainColor;
+                border-bottom: 1px solid #DDD;
+                box-shadow: 0px 2px 5px #c1c1c1;
+                z-index: 5;
+                border-radius: 25px;
+            }
+        }
+        img{
+            object-fit: contain;
+            width: 100%;
+        }
+        
+    }
+
+    .scientifi-articles-section{
+        background-color: #FFF;
+        .article{
+            border-radius: $smallBorder;
+            overflow: hidden;
+            display: block;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .5s;
+            }
+            .overlay{
+                background: linear-gradient(to top , #000 , rgba(0,0,0,0));
+                transition: .5s;
+                z-index: 7;
+                h3{
+                    color:#FFF
+                }
+                p{
+                    color:#a1a1a1
+                }
+            }
+        }
+        .first,.art-4{height: 320px;}
+        .second,.art-3{height: 250px;}
+        .center-3{height: 100%;}
+        .see-more{
+            background:#fad981;
+            h4{
+                color:#000
+            }
+        }
+    }
+
+}
